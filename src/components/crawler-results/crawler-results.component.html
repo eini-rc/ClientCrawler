@@ -1,0 +1,13 @@
+<table *ngIf="urls.length > 0">
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let current of urls">
+      <td>{{ current.url }}</td>
+    </tr>
+  </tbody>
+</table>
