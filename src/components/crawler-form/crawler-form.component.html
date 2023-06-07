@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()">
+  <input type="text" placeholder="URL" [(ngModel)]="url" name="url" required />
+  <input
+    type="number"
+    placeholder="Depth"
+    [(ngModel)]="depth"
+    name="depth"
+    required
+  />
+  <button type="submit">Crawl</button>
+</form>
