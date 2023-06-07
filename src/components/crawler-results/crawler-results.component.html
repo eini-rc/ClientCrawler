@@ -1,19 +1,23 @@
-<div class="url-list">
-  <div class="spinner" *ngIf="isLoading"></div>
-
-  <table *ngIf="!isLoading && urls.length > 0">
+<div class="spinner" *ngIf="isLoading"></div>
+<div class="url-list" *ngIf="!isLoading && urls.length > 0">
+  <h3>
+    Urls Result number: <i>{{ urls.length }}</i> - limit with depth:
+    <i>{{ depth }}</i>
+  </h3>
+  <table>
     <thead>
       <tr>
-        <th>
-          Urls Result number: <i>{{ urls.length }}</i> - limit with depth:
-          <i>{{ depth }}</i>
-        </th>
+        <th>Url</th>
+        <th>Parent Url</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let current of urls">
         <td>
           <a href="{{ current.url }}">{{ current.url }}</a>
+        </td>
+        <td>
+          <a href="{{ current.parent_url }}">{{ current.parent_url }}</a>
         </td>
       </tr>
     </tbody>
