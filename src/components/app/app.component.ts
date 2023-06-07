@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CrawlerService } from 'src/services/crawler.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'crawler-client';
 
-  constructor() {}
+  urls: any[];
+
+  constructor(private crawlerService: CrawlerService) {}
+
+  crawl(url: string, depth: number) {
+    this.crawlerService.crawl(url, depth).subscribe((response) => {
+      this.urls = response;
+    });
+  }
 }
