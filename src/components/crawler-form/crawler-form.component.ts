@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-crawler-form',
@@ -6,9 +6,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./crawler-form.component.css'],
 })
 export class CrawlerFormComponent {
-  url: string;
-  depth: number;
   @Output() crawl = new EventEmitter<{ url: string; depth: number }>();
+  @Input() depth: number;
+
+  url: string;
 
   onSubmit() {
     this.crawl.emit({ url: this.url, depth: this.depth });

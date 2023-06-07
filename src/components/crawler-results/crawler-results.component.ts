@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CrawlerResultsComponent {
   @Input() urls: any[] = [];
+  @Input() depth: number = 1;
+  @Input() isLoading: boolean = false;
+  @Input() errorMessage: string = '';
 }
