@@ -1,0 +1,64 @@
+.url-list {
+    margin-top: 20px;
+}
+
+.url-list h2 {
+    color: #333;
+}
+
+.url-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.url-list th,
+.url-list td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.url-list th {
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+.url-list td a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.url-list td a:hover {
+    text-decoration: underline;
+}
+
+.url-list td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.spinner::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spinnerAnimation 0.8s linear infinite;
+}
+
+@keyframes spinnerAnimation {
+    to {
+        transform: rotate(360deg);
+    }
+}
