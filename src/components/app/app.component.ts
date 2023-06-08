@@ -8,14 +8,12 @@ import { CrawlerService } from 'src/services/crawler.service';
 })
 export class AppComponent {
   urls: any[] = [];
-  depth: number = 1;
   isLoading: boolean = false;
   errorMessage: string = '';
 
   constructor(private crawlerService: CrawlerService) {}
 
   crawl(url: string, depth: number) {
-    this.depth = depth;
     // reset prev list urls & error message before try to get new list
     this.urls = [];
     this.errorMessage = '';

@@ -7,9 +7,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class CrawlerFormComponent {
   @Output() crawl = new EventEmitter<{ url: string; depth: number }>();
-  @Input() depth: number;
 
   url: string;
+  depth: number = 1;
 
   onSubmit() {
     this.crawl.emit({ url: this.url, depth: this.depth });

@@ -2,11 +2,9 @@
   <h1>Crawler App</h1>
   <app-crawler-form
     (crawl)="crawl($event.url, $event.depth)"
-    [depth]="depth"
   ></app-crawler-form>
   <app-crawler-results
     [urls]="urls"
-    [depth]="depth"
     [isLoading]="isLoading"
     [errorMessage]="errorMessage"
   >
