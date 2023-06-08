@@ -1,27 +1,37 @@
 # CrawlerClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+This project is an Angular application for crawling URLs and displaying the results in a user-friendly way. Follow the instructions below to run the project on your local machine.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Make sure you have the following software installed on your machine:
 
-## Code scaffolding
+- Node.js 
+- Angular CLI 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. Clone the repository to your local machine:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+   ```bash
+   git clone https://github.com/eini-rc/ClientCrawler.git
+   ```
 
-## Running unit tests
+2. Navigate to the project directory:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   cd ClientCrawler
+   ```
+   
+3. Install project dependencies using npm:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+   ```bash
+   npm i
+   ```
+   
+  ## Running the Application
+To start the development server and run the Angular application, run the following command:
+```bash
+ng serve
+```
+This will start the development server at http://localhost:4200.
